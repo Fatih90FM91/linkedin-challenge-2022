@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<h1>Linkedin Members</h1>
+
+
+
+
+            <ul class="container">
+
+                <br>
+            <h3> Name: {{post.author.first_name}}  {{post.author.last_name}} </h3> 
+                
+                <br>
+                <h6> Job Title :  <strong> {{post.job_title}}</strong> </h6>
+                
+
+            </ul>
+
+            <br><br>
+
+            <a href="{%url 'home'  %}" class="btn btn-dark">Back</a>
+
+{%else%}
+
+<h4>You're NOT allowed to here....</h4>
+
+
+{%endif%}
+
+
+
+
+
+
+
+
+{% endblock %}
