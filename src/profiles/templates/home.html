@@ -13,7 +13,7 @@
 
 {% for post in object_list %}
     <ul class="container">
-       <h3> <li>{{post.author.first_name}}  {{post.author.last_name}}  <strong> </li> </h3>
+       <h3> <li>{{post.member.first_name}}  {{post.member.last_name}}  <strong> </li> </h3>
         <a href="{%url 'profile-detail' post.pk %}" class="btn btn-info">View Profile</a>
 
 
